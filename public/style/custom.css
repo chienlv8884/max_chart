@@ -1,0 +1,13 @@
+.chart-box {
+    /* max-width: 100%; */
+    margin: 35px auto;
+}
+
+#chart-candlestick,
+#chart-bar {
+    max-width: 100%;
+}
+
+#chart-bar {
+    margin-top: -30px;
+}

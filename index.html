@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CandleStick Chart with Bar</title>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/apexcharts.min.js"></script>
+  <script src="/js/custom.js"></script>
+  <link href="/style/styles.css" rel="stylesheet" />
+
+  <link href="/style/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="chart-box">
+    <a href="../">Back</a>
+    https://dexscreener.com/arbitrum/0xaf1f6c3485ad1f1640267c402d3f2bf54c0b8dd0
+    <div id="chart"></div>
+  </div>
+
+  <script>
+    var options = {
+      series: seriesData,
+
+      chart: {
+        height: 800,
+        width: 1200,
+        type: 'line',
+        zoom: {
+            enabled: false
+        },
+        animations: {
+        enabled: false
+      },
+      },
+      title: {
+        text: 'CandleStick Chart',
+        align: 'left'
+      },
+      stroke: {
+        width: [1, 1]
+      },
+      tooltip: {
+        shared: true,
+        custom: [function ({ seriesIndex, dataPointIndex, w }) {
+          return w.globals.series[seriesIndex][dataPointIndex]
+        }, function ({ seriesIndex, dataPointIndex, w }) {
+          var o = w.globals.seriesCandleO[seriesIndex][dataPointIndex]
+          var h = w.globals.seriesCandleH[seriesIndex][dataPointIndex]
+          var l = w.globals.seriesCandleL[seriesIndex][dataPointIndex]
+          var c = w.globals.seriesCandleC[seriesIndex][dataPointIndex]
+          return (
+            ''
+          )
+        }]
+      },
+      xaxis: {
+        type: 'datetime'
+      },
+      yaxis: {
+        type: 'numeric'
+      }
+    };
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+</body>
+
+</html>

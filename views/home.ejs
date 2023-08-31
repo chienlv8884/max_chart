@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CandleStick Chart with Bar</title>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/notify.min.js"></script>
+  <script src="/js/apexcharts.min.js"></script>
+  <script src="/js/custom.js"></script>
+  <link href="/style/bootstrap.min.css" rel="stylesheet" />
+  <link href="/style/custom.css" rel="stylesheet" />
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Token</div>
+      <div class="panel panel-body">
+        <input id="token-name" placeholder="token-name"></input>
+        <input id="link-coingecko" placeholder="link-coingecko"></input>
+        <button id="add-token" class="btn btn-primary">Add</button>
+        <div style="display: inline;margin-left: 100px;">
+          <select id="token"></select>
+          <!-- <button id="show" class="btn btn-primary">Show</button> -->
+          <button id="show2" class="btn btn-primary">Show</button>
+        </div>
+      </div>
+    </div>
+    <div id="chart"></div>
+  </div>
+</body>
+
+</html>
