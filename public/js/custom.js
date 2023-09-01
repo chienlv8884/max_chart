@@ -69,8 +69,8 @@ async function getTokens() {
     tokens.forEach(element => {
         console.log(element)
         $('#token').append(`<option value="${element}">${element}</option>`)
-        $.notify('loaded', 'success');
     });
+    $.notify('loaded', 'success');
 }
 function addTokenEvent() {
     $('#add-token').click(function() {

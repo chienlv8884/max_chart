@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.render('home')
 })
 app.get('/list-token', function (req, res) {
-    res.json({tokens: ['celo','flux','xrp']})
+    res.json({tokens: ['dydx','op','celo','flux','xrp']})
 })
 app.get('/add-token', function(req, res) {
     var params = req.query
