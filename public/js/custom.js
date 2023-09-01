@@ -70,6 +70,7 @@ async function getTokens() {
         console.log(element)
         $('#token').append(`<option value="${element}">${element}</option>`)
     });
+    $('#token').select2();
     $.notify('loaded', 'success');
 }
 function addTokenEvent() {
@@ -122,5 +123,4 @@ $(document).ready(function() {
     addTokenEvent()
     showChartEvent()
     showChart2Event()
-    $('#token').select2();
 })
