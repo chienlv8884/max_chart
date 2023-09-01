@@ -122,4 +122,5 @@ $(document).ready(function() {
     addTokenEvent()
     showChartEvent()
     showChart2Event()
+    $('#token').select2();
 })

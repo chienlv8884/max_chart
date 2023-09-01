@@ -7,10 +7,12 @@
   <title>CandleStick Chart with Bar</title>
 
   <script src="/js/jquery.min.js"></script>
+  <script src="/js/select2.min.js"></script>
   <script src="/js/notify.min.js"></script>
   <script src="/js/apexcharts.min.js"></script>
   <script src="/js/custom.js"></script>
   <link href="/style/bootstrap.min.css" rel="stylesheet" />
+  <link href="/style/select2.min.css" rel="stylesheet" />
   <link href="/style/custom.css" rel="stylesheet" />
   <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 </head>
@@ -24,7 +26,7 @@
         <input id="link-coingecko" placeholder="link-coingecko"></input>
         <button id="add-token" class="btn btn-primary">Add</button>
         <div style="display: inline;margin-left: 100px;">
-          <select id="token"></select>
+          <select id="token" style="width: 100px;"></select>
           <!-- <button id="show" class="btn btn-primary">Show</button> -->
           <button id="show2" class="btn btn-primary">Show</button>
         </div>
